@@ -1,0 +1,137 @@
+Task 1 — DFS
+
+Adjacency lists:
+
+A: C B D
+B: A C E G
+C: A B D
+D: C A
+E: G F B
+F: G E
+G: F B
+
+DFS explores one branch completely before moving to another branch.
+
+Start at A
+Visit A
+Go to C
+
+At C
+Visit C
+A already visited
+Go to B
+
+At B
+Visit B
+A already visited
+C already visited
+Go to E
+
+At E
+Visit E
+Go to G
+
+At G
+Visit G
+Go to F
+
+At F
+Visit F
+G already visited
+E already visited
+Backtrack to G
+
+Back at G
+B already visited
+Backtrack to E
+
+Back at E
+F already visited
+B already visited
+Backtrack to B
+
+Back at B
+G already visited
+Backtrack to C
+
+Back at C
+Go to D
+
+At D
+Visit D
+C already visited
+A already visited
+DFS complete
+
+DFS Visiting Order
+A → C → B → E → G → F → D
+
+Task 2 — BFS
+
+Detailed BFS Trace
+
+Initial Queue: [A]
+
+Step 1
+Remove A from queue
+Visit A
+Add neighbors: C, B, D
+
+Queue: [C, B, D]
+
+Step 2
+Remove C
+Visit C
+A already visited
+B already in queue
+D already in queue
+
+Queue: [B, D]
+
+Step 3
+Remove B
+Visit B
+A and C already visited
+Add E and G
+
+Queue: [D, E, G]
+
+Step 4
+Remove D
+Visit D
+C and A already visited
+
+Queue: [E, G]
+
+Step 5
+Remove E
+Visit E
+G already in queue
+Add F
+B already visited
+
+Queue: [G, F]
+
+Step 6
+Remove G
+Visit G
+F already in queue
+B already visited
+
+Queue: [F]
+
+Step 7
+Remove F
+Visit F
+G and E already visited
+
+Queue becomes empty.
+
+BFS Visiting Order
+A → C → B → D → E → G → F
+
+Task 4
+Edinburgh → Stirling → Perth → Dundee
+50 + 40 + 60 = 150
+
+
